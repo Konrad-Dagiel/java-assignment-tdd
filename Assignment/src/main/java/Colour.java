@@ -71,4 +71,7 @@ public class Colour {
         return "RED: "+red+", GREEN: "+green+", BLUE: "+blue;
     }
 
+    public int getRed() {
+        return red;
+    }
 }
