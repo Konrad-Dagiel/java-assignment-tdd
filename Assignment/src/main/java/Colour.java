@@ -11,7 +11,9 @@ public class Colour {
         blue = (int) (b*255);
     }
     public Colour(int colourCode){
-
+        if (colourCode > 16777214){
+            throw new IllegalArgumentException("max 24 bits allowed");
+        }
         red = extractBits(colourCode,1,8);
         green = extractBits(colourCode,9,8);
         blue = extractBits(colourCode,17,8);
