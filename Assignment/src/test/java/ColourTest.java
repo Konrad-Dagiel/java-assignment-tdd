@@ -61,11 +61,13 @@ public class ColourTest {
         Colour colour = new Colour(16755455);
         Assertions.assertEquals("255, 170, 255", colour.getRGB());
     }
+
     @Test
     void input11184810ShouldCreate170_170_170(){
         Colour colour = new Colour(11184810);
         Assertions.assertEquals("170, 170, 170", colour.getRGB());
     }
+
     @Test
     void inputGreaterThan24BitsShouldThrowIllegalArgumentException(){
         Assertions.assertThrows(
@@ -78,6 +80,11 @@ public class ColourTest {
         Assertions.assertThrows(
                 IllegalArgumentException.class, () -> new Colour(-1)
         );
+    }
+    @Test
+    void redOfBlueShouldBeZero(){
+        Colour colour = new Colour(16711680);
+        Assertions.assertEquals(0, colour.getRed());
     }
 
     @Test
