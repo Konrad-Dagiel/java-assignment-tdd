@@ -49,6 +49,12 @@ public class ColourTest {
         );
     }
 
+    @Test
+    void twoWhiteColoursShouldBeEqual(){
+        Colour c1 = new Colour(1.0f,1.0f,1.0f);
+        Colour c2 = new Colour(16777215);
+        Assertions.assertEquals(c1, c2);
+    }
 
 
 
