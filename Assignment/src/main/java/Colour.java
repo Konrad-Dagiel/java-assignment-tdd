@@ -11,6 +11,7 @@ public class Colour {
         blue = (int) (b*255);
     }
     public Colour(int colourCode){
+
         red = extractBits(colourCode,1,8);
         green = extractBits(colourCode,9,8);
         blue = extractBits(colourCode,17,8);

@@ -35,6 +35,12 @@ public class ColourTest {
         Colour colour = new Colour(11184810);
         Assertions.assertEquals("170, 170, 170", colour.getRGB());
     }
+    @Test
+    void inputGreaterThan24BitsShouldThrowIllegalArgumentException(){
+        Assertions.assertThrows(
+                IllegalArgumentException.class, () -> new Colour(16777216)
+        );
+    }
 
 
 
