@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Colour {
     private final int red;
     private final int blue;
@@ -28,4 +30,12 @@ public class Colour {
     private int extractBits(int number, int position){
         return (((1 << 8) - 1) & (number >> (position - 1)));
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Colour colour)) return false;
+        return red == colour.red && blue == colour.blue && green == colour.green;
+    }
+
 }
