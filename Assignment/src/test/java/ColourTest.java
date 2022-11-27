@@ -9,7 +9,7 @@ public class ColourTest {
     }
 
     @Test
-    void allZeroesShouldCreateWhite() throws IllegalArgumentException {
+    void allZeroesShouldCreateBlack() throws IllegalArgumentException {
         Colour colour = new Colour(0, 0, 0);
         Assertions.assertEquals("0, 0, 0", colour.getRGB());
     }
