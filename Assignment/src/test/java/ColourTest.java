@@ -93,6 +93,12 @@ public class ColourTest {
         Assertions.assertEquals("RED: 0, GREEN: 0, BLUE: 0", c.toString());
     }
 
+    @Test
+    void getRedofBlackShouldBeZero(){
+        Colour c = new Colour(0);
+        Assertions.assertEquals(0, c.getRed());
+    }
+
 
 
 }
