@@ -19,5 +19,11 @@ public class ColourTest {
                 IllegalArgumentException.class, () -> new Colour(-0.1f, -0.1f, -0.1f)
         );
     }
+    @Test
+    void input16777215ShouldCreateWhite(){
+        Colour colour = new Colour(16777215);
+        Assertions.assertEquals("255, 255, 255", colour.getRGB());
+    }
+
 
 }
