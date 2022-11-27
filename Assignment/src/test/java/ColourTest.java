@@ -99,6 +99,17 @@ public class ColourTest {
         Assertions.assertEquals(0, c.getRed());
     }
 
+    @Test
+    void getBlueOfWhiteShouldBe255(){
+        Colour c = new Colour(1.0f, 1.0f, 1.0f);
+        Assertions.assertEquals(255, c.getBlue());
+    }
+
+    @Test
+    void getGreenOfWhiteShouldBe255(){
+        Colour c = new Colour(1.0f, 1.0f, 1.0f);
+        Assertions.assertEquals(255, c.getGreen());
+    }
 
 
 
