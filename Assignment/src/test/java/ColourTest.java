@@ -3,10 +3,23 @@ import org.junit.jupiter.api.Test;
 
 public class ColourTest {
     @Test
-    void onesShouldCreateWhite() throws IllegalArgumentException {
+    void allOnesShouldCreateWhite() throws IllegalArgumentException {
         Colour colour = new Colour(1.0f, 1.0f, 1.0f);
         Assertions.assertEquals("255, 255, 255", colour.getRGB());
     }
+
+    @Test
+    void allZeroesShouldCreateWhite() throws IllegalArgumentException {
+        Colour colour = new Colour(0, 0, 0);
+        Assertions.assertEquals("0, 0, 0", colour.getRGB());
+    }
+
+    @Test
+    void allHalvesShouldCreate127_127_127() throws IllegalArgumentException {
+        Colour colour = new Colour(0.5f, 0.5f, 0.5f);
+        Assertions.assertEquals("127, 127, 127", colour.getRGB());
+    }
+
     @Test
     void inputsGreaterThanOneShouldThrowIllegalArgumentException(){
         Assertions.assertThrows(
@@ -23,6 +36,24 @@ public class ColourTest {
     void input16777215ShouldCreateWhite(){
         Colour colour = new Colour(16777215);
         Assertions.assertEquals("255, 255, 255", colour.getRGB());
+    }
+
+    @Test
+    void input255ShouldCreateRed(){
+        Colour colour = new Colour(255);
+        Assertions.assertEquals("255, 0, 0", colour.getRGB());
+    }
+
+    @Test
+    void input65280ShouldCreateGreen(){
+        Colour colour = new Colour(65280);
+        Assertions.assertEquals("0, 255, 0", colour.getRGB());
+    }
+
+    @Test
+    void input65280ShouldCreateBlue(){
+        Colour colour = new Colour(16711680);
+        Assertions.assertEquals("0, 0, 255", colour.getRGB());
     }
 
     @Test
