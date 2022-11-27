@@ -14,15 +14,15 @@ public class Colour {
         if (colourCode > 16777214){
             throw new IllegalArgumentException("max 24 bits allowed");
         }
-        red = extractBits(colourCode,1,8);
-        green = extractBits(colourCode,9,8);
-        blue = extractBits(colourCode,17,8);
+        red = extractBits(colourCode,1);
+        green = extractBits(colourCode,9);
+        blue = extractBits(colourCode,17);
     }
     public String getRGB(){
         return red+", " + green+", "+blue;
     }
 
-    private int extractBits(int number, int position, int bitsToExtract){
-        return (((1 << bitsToExtract) - 1) & (number >> (position - 1)));
+    private int extractBits(int number, int position){
+        return (((1 << 8) - 1) & (number >> (position - 1)));
     }
 }

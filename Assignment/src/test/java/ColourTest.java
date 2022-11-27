@@ -42,6 +42,14 @@ public class ColourTest {
         );
     }
 
+    @Test
+    void inputLessThanZeroShouldThrowIllegalArgumentException(){
+        Assertions.assertThrows(
+                IllegalArgumentException.class, () -> new Colour(-1)
+        );
+    }
+
+
 
 
 }
