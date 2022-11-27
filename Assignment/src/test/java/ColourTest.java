@@ -56,6 +56,12 @@ public class ColourTest {
         Assertions.assertEquals(c1, c2);
     }
 
+    @Test
+    void toStringShouldReturnExpectedValuesForBlackColour(){
+        Colour c = new Colour(0);
+        Assertions.assertEquals("RED: 0, GREEN: 0, BLUE: 0", c.toString());
+    }
+
 
 
 }
