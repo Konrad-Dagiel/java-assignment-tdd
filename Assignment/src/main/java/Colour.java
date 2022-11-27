@@ -66,5 +66,9 @@ public class Colour {
         if (!(o instanceof Colour colour)) return false;
         return red == colour.red && blue == colour.blue && green == colour.green;
     }
+    @Override
+    public String toString(){
+        return "RED: "+red+", GREEN: "+green+", BLUE: "+blue;
+    }
 
 }
