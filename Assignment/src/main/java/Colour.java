@@ -12,8 +12,8 @@ public class Colour {
     }
     public Colour(int colourCode){
         red = extractBits(colourCode,1,8);
-        green = extractBits(colourCode,7,8);
-        blue = extractBits(colourCode,15,8);
+        green = extractBits(colourCode,9,8);
+        blue = extractBits(colourCode,17,8);
     }
     public String getRGB(){
         return red+", " + green+", "+blue;

@@ -30,6 +30,12 @@ public class ColourTest {
         Colour colour = new Colour(16755455);
         Assertions.assertEquals("255, 170, 255", colour.getRGB());
     }
+    @Test
+    void input11184810ShouldCreate170_170_170(){
+        Colour colour = new Colour(11184810);
+        Assertions.assertEquals("170, 170, 170", colour.getRGB());
+    }
+
 
 
 }
