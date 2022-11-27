@@ -10,7 +10,16 @@ public class Colour {
         green = (int) (g*255);
         blue = (int) (b*255);
     }
+    public Colour(int colourCode){
+        red = extractBits(colourCode,1,8);
+        green = extractBits(colourCode,7,8);
+        blue = extractBits(colourCode,15,8);
+    }
     public String getRGB(){
-        return red+", " + blue+", "+green;
+        return red+", " + green+", "+blue;
+    }
+
+    private int extractBits(int number, int position, int bitsToExtract){
+        return (((1 << bitsToExtract) - 1) & (number >> (position - 1)));
     }
 }

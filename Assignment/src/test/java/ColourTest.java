@@ -25,5 +25,11 @@ public class ColourTest {
         Assertions.assertEquals("255, 255, 255", colour.getRGB());
     }
 
+    @Test
+    void input16755455ShouldCreate255_170_255(){
+        Colour colour = new Colour(16755455);
+        Assertions.assertEquals("255, 170, 255", colour.getRGB());
+    }
+
 
 }
